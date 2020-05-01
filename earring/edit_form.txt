@@ -1,0 +1,31 @@
+Edit File Form 
+
+echo "</select> <br>
+
+  ID: <input type='text' name='ID' class='form-control'> <br>
+  Image URL: <input type='text' name='img' class='form-control'> <br>
+  Name: <input type='text' name='name' class='form-control'> <br>
+  Description: <input type='text' name='description' class='form-control'> <br>
+  Size: <input type='text' name='size' class='form-control'> <br>
+  Weight: <input type='number' name='weight' class='form-control'> <br>
+  Quantity: <input type='number' name='amount' class='form-control'> <br>
+	Price: <input type='number' name='price' class='form-control'>
+	<br><br>
+	<button type='submit' class='btn btn-dark form-control'>Update</button>
+	</form></div>";
+
+Target File 
+$trail = $_POST['trail'];
+$enter = $_POST['enter'];
+$EarringID = $_POST['EarringID'];
+$ID = $_POST['ID'];
+$name = $_POST['name'];
+$img = $_POST['img'];
+$description = $_POST['description'];
+$size = $_POST['size'];
+$weight = $_POST['weight'];
+$amount = $_POST['amount'];
+$price = $_POST['price'];
+
+  $sql = "UPDATE earings SET ID = '$ID', img = '$img', name = '$name' , description = '$description', size = '$size',
+  weight = '$weight', amount = '$amount',  price = '$price' WHERE ID = '$EarringID';";
